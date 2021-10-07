@@ -4,7 +4,7 @@
 # For Github Pushes:
 # Repository: https://github.com/mmotztulane/TV_Spotify
 
-Class Account
+class Account
 
   def initialize(user_name, password, birthdate)
     @name = user_name
@@ -56,7 +56,7 @@ Class Account
 
 end
 
-Class Movies
+class Movies
 
   def initialize()
     @like_list = []     #list of users who like it
