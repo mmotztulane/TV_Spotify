@@ -1,6 +1,10 @@
 # Milestone 0
 # group member: Owen Butler, Max Motz, Yuxuan Zhang
 # Project: TV Spotify
+# For Github Pushes:
+# Username: mmotztulane
+# Password: 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
+# Repository: https://github.com/mmotztulane/TV_Spotify
 
 
 Class Account
