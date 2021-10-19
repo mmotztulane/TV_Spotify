@@ -1,3 +1,4 @@
+
 <%= form_with(model: movie, local: true) do |form| %>
   <% if movie.errors.any? %>
     <div id="error_explanation">
@@ -11,42 +12,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :movie %>
-    <%= form.text_field :movie %>
+  <div class="form-group">
+    <label for="movie">Movie Name:</label>
+    <%= form.text_field :movie, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :likes %>
-    <%= form.text_field :likes %>
+  <div class="form-group">
+    <label for="genre">Genre:</label>
+    <%= form.text_field :genre, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :dislikes %>
-    <%= form.text_field :dislikes %>
+  <div class="form-group">
+    <label for="age_rating">Age_Rating:</label>
+    <%= form.select :age_rating, ['G', 'PG','PG-13','R','NC-17']%> 
   </div>
 
-  <div class="field">
-    <%= form.label :comments %>
-    <%= form.text_field :comments %>
+  <div class="form-group">
+    <label for="release_date">Release_Date:</label>
+    <%= form.text_field :release_date, class: "form-control", placeholder: "MM/DD/YYYY"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :genre %>
-    <%= form.text_field :genre %>
-  </div>
-
-  <div class="field">
-    <%= form.label :age_rating %>
-    <%= form.text_field :age_rating %>
-  </div>
-
-  <div class="field">
-    <%= form.label :release_date %>
-    <%= form.text_field :release_date %>
-  </div>
-
+<div class="col-xs-12" style="height:20px;"></div>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :Submit, class: 'btn btn-success' %>
   </div>
 <% end %>

@@ -7,9 +7,5 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.timestamps
     end
   end
-    
-    before_save :default_values
-    def default_values
-      self.comments= 'No Comment' if self.status.nil
-    end
+  
 end

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>Users: Opinions on Shrek</h1>
 
 <style>
     body {
@@ -34,9 +34,9 @@
             <td><%= user.username %></td>
             <td><%= user.reaction %></td>
             <td><%= user.comment %></td>
-            <td><%= link_to 'Show', user %></td>
-            <td><%= link_to 'Edit', edit_user_path(user) %></td>
-            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', user, class: "btn btn-outline-primary btn-sm" %></td>
+            <td><%= link_to 'Edit', edit_user_path(user), class: "btn btn-outline-primary btn-sm" %></td>
+            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-primary btn-sm" %></td>
           </tr>
         <% end %>
       </tbody>
@@ -45,6 +45,6 @@
 
 <br>
 
-<a href="users/new" class="btn btn-primary">New User</a>
+<a href="users/new" class="btn btn-primary">New Opinion on Shrek</a>
 
 <!-- <%= link_to 'New User', new_user_path %> -->

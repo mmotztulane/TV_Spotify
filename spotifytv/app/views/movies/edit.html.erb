@@ -8,5 +8,7 @@
 
 <%= render 'form', movie: @movie %>
 
-<%= link_to 'Show', @movie %> |
-<%= link_to 'Back', movies_path %>
+<div class="col-xs-12" style="height:30px;"></div>
+<%= link_to 'Show', @movie, class: "btn btn-secondary btn-sm" %> |
+<%= link_to 'Back', movies_path, class: "btn btn-secondary btn-sm" %>
+

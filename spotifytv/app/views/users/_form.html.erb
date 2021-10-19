@@ -12,22 +12,23 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <label for="Username">Username</label>
+  <div class="form-group" >
+    <label for="Username">Username:</label>
     <%= form.text_field :username, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="Reaction">Like or Dislike</label>
-    <%= form.text_field :reaction, class: "form-control" %>
+    <label for="Reaction">Reaction:</label>
+    <%= form.select :reaction, ['Like', 'Dislike']%> 
   </div>
 
   <div class="form-group">
-    <label for="comment?">Comment</label>
+    <label for="comment?">Comment:</label>
     <%= form.text_field :comment, class: "form-control", placeholder: "optional" %>
   </div>
 
+<div class="col-xs-12" style="height:20px;"></div>
   <div class="actions">
-    <%= form.submit%>
+    <%= form.submit :Submit, class: 'btn btn-success' %>
   </div>
 <% end %>

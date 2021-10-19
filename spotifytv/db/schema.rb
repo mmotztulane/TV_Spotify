@@ -14,9 +14,9 @@ ActiveRecord::Schema.define(version: 2021_10_18_074442) do
 
   create_table "movies", force: :cascade do |t|
     t.string "movie"
-    t.integer "likes"
-    t.integer "dislikes"
-    t.integer "comments"
+    t.integer "likes", default: 0, null: false
+    t.integer "dislikes", default: 0, null: false
+    t.integer "comments", default: 0, null: false
     t.string "genre"
     t.string "age_rating"
     t.date "release_date"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_10_18_074442) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "reaction"
-    t.text "comment"
+    t.text "comment", default: "No Comment", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
