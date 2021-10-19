@@ -7,7 +7,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.integer 'comments', :null => false, :default => '0'
       t.string 'genre'
       t.string 'age_rating'
-      t.date 'release_date'
+      t.string 'release_date'
       t.timestamps
     end
   end

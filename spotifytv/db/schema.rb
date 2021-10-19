@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 2021_10_18_074442) do
     t.integer "comments", default: 0, null: false
     t.string "genre"
     t.string "age_rating"
-    t.date "release_date"
+    t.string "release_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "username", default: "Anonymous", null: false
     t.string "reaction"
     t.text "comment", default: "No Comment", null: false
     t.datetime "created_at", precision: 6, null: false

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 more_users = [
   {:username => 'Max25', :reaction => 'Like',
-    :comment => 'Entertaining throughout'},
+    :comment => 'Entertaining throughout!'},
   {:username => 'SanjoBanjo', :reaction => 'Like',
     :comment => 'Very Funny'},
   {:username => 'Randy', :reaction => 'Dislike',
@@ -20,15 +20,15 @@ end
 
 more_movies = [
   {:movie => 'Shrek', :likes => "2", :dislikes => "1", :comments => "3", :genre => "Comedy, Fantasy, Animated", :age_rating => "G", 
-    :release_date => '22-Apr-2001'},
+    :release_date => '04/22/2001'},
     
   {:movie => 'Bee Movie', :likes => "1", :dislikes => "1", :comments => "10", :genre => "Comedy, Animated", :age_rating => "G", 
-    :release_date => '02-Nov-2007'},
+    :release_date => '11/02/2007'},
     
   {:movie => 'Joker', :likes => "5", :dislikes => "3", :comments => "16", :genre => "Thriller, Crime Film, Drama", :age_rating => "R", 
-    :release_date => '04-Oct-2019'},
+    :release_date => '10/04/2019'},
   {:movie => 'Shrek the Third', :likes => "0", :dislikes => "96", :comments => "0", :genre => "Comedy, Fantasy, Animated", :age_rating => "G", 
-    :release_date => '18-May-2007'}
+    :release_date => '5/18/2007'}
 ]
 
 
