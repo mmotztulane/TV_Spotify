@@ -1,6 +1,18 @@
-class AccountController < ApplicationController
+class AccountsController < ApplicationController
+    before_action :set_account, only: %i[ show edit update destroy ]
+    
     def index
-        
+        @accounts = Account.all
+    end
+    
+    def show
+    end
+    
+    def new
+        @account = Account.new
+    end
+    
+    def edit
     end
     
     def create
@@ -19,7 +31,7 @@ class AccountController < ApplicationController
 
     def update
         respond_to do |format|
-          if @account.update(movie_params)
+          if @account.update(account_params)
             format.html { redirect_to @account, notice: "Account info was successfully updated." }
             format.json { render :show, status: :ok, location: @account }
           else
@@ -29,6 +41,14 @@ class AccountController < ApplicationController
         end
     end
     
+    def destroy
+        @account.destroy
+        respond_to do |format|
+          format.html { redirect_to account_url, notice: "Account was successfully destroyed." }
+          format.json { head :no_content }
+        end
+  end
+    
     private
     # Use callbacks to share common setup or constraints between actions.
     def set_account
@@ -37,6 +57,6 @@ class AccountController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def account_params
-      params.require(:account).permit(:name, :password)
+      params.require(:account).permit(:user, :password)
     end
 end

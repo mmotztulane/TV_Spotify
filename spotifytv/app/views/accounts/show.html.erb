@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<style>
+    body {
+  background-color: rgb(35,35,35);
+    }
+</style>
+
+<p>
+  <strong>Username:</strong>
+  <%= @account.user %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @account.password %>
+</p>
+
+<div class="col-xs-12" style="height:30px;"></div>
+<%= link_to 'Edit', edit_account_path(@account),class: "btn btn-secondary btn-sm" %> |
+<%= link_to 'Back', account_path, class: "btn btn-secondary btn-sm" %>

@@ -1,0 +1,12 @@
+<h1>New Account</h1>
+
+<style>
+    body {
+  background-color: rgb(35,35,35);
+    }
+</style>
+
+<%= render 'form', account: @account %>
+
+<div class="col-xs-12" style="height:30px;"></div>
+<%= link_to 'Back', accounts_path, class: "btn btn-secondary btn-sm" %>

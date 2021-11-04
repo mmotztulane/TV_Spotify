@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :users
   root :to => redirect('/users')
   get "settings", to: "settings#index"
-  get "account", to: "account#index"
+  resources :accounts
   resources :movies
 end

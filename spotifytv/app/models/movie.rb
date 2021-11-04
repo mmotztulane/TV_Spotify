@@ -1,4 +1,4 @@
-class Movie < ApplicationRecord
+class Movie < ActiveRecord::Base
   validates :movie, format: { with: /\A[a-z\d ,:-]*\Z/i,
     message: "Only allows capital/lowercase letters, numbers, spaces, commas, colons, and dashes." }, length: { in: 1..30 }
   validates :genre, format: { with: /\A[a-z ,]*\Z/i,
