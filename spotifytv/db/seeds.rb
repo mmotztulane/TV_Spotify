@@ -41,6 +41,8 @@ more_accounts = [
     {:name => 'Abc', :password => 'abc123'},
     
     {:name => 'ManInSuit', :password => 'logmein'}
+    
+    {:name => 'Shrek', :password => 'dreamworks'}
 ]
 
 more_accounts.each do |account|
