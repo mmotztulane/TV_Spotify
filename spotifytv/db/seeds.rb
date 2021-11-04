@@ -11,7 +11,7 @@ more_users = [
   {:username => 'SanjoBanjo', :reaction => 'Like',
     :comment => 'Very Funny'},
   {:username => 'Randy', :reaction => 'Dislike',
-    :comment => 'No comment'},
+    :comment => 'No comment'}
 ]
 
 more_users.each do |user|
@@ -40,7 +40,7 @@ end
 more_accounts = [
     {:name => 'Abc', :password => 'abc123'},
     
-    {:name => 'ManInSuit', :password => 'logmein'}
+    {:name => 'ManInSuit', :password => 'logmein'},
     
     {:name => 'Shrek', :password => 'dreamworks'}
 ]
