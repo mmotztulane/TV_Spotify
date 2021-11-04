@@ -23,7 +23,7 @@
   <tbody>
     <% @accounts.each do |account| %>
       <tr>
-        <td><%= account.user %></td>
+        <td><%= account.name %></td>
         <td><%= account.password %></td>
         <td><%= link_to 'Show', account, class: "btn btn-outline-primary btn-sm" %></td>
         <td><%= link_to 'Edit', edit_account_path(account), class: "btn btn-outline-primary btn-sm" %></td>
