@@ -12,6 +12,30 @@ more_users = [
     :comment => 'Very Funny'},
   {:username => 'Randy', :reaction => 'Dislike',
     :comment => 'No comment'}
+    {:username => 'Sashon', :reaction => 'Like',
+    :comment => 'I had a good time'},
+  {:username => 'Bashon', :reaction => 'Like',
+    :comment => 'Dope!'},
+  {:username => 'lack', :reaction => 'Dislike',
+    :comment => 'No.'}
+    {:username => 'lack', :reaction => 'Like',
+    :comment => 'Good movie for Kids!'},
+  {:username => 'tack', :reaction => 'Like',
+    :comment => 'Cool!'},
+  {:username => 'pack', :reaction => 'Dislike',
+    :comment => 'No comment'}
+  {:username => 'pack2', :reaction => 'Dislike',
+    :comment => 'Nada'}
+  {:username => 'knack', :reaction => 'Dislike',
+    :comment => 'Meh...'}
+  {:username => 'jack', :reaction => 'Like',
+    :comment => 'Alright!'}
+  {:username => 'hack', :reaction => 'Dislike',
+    :comment => 'Boo'}
+  {:username => 'sauron', :reaction => 'Like',
+    :comment => 'Fun!'}
+  {:username => 'morepeople', :reaction => 'Like',
+    :comment => 'Great movie!'}
 ]
 
 more_users.each do |user|
