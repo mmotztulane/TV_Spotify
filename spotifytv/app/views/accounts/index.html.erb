@@ -25,9 +25,9 @@
       <tr>
         <td><%= account.name %></td>
         <td><%= account.password %></td>
-        <td><%= link_to 'Show', account, class: "btn btn-outline-primary btn-sm" %></td>
-        <td><%= link_to 'Edit', edit_account_path(account), class: "btn btn-outline-primary btn-sm" %></td>
-        <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-outline-primary btn-sm" %> </td>
+        <td><%= link_to '', account, class: "fas fa-eye" %></td>
+        <td><%= link_to '', edit_movie_path(account), class: "fas fa-edit" %> </td>
+        <td><%= link_to '', account, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
       </tr>
     <% end %>
   </tbody>
