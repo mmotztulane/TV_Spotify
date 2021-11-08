@@ -14,17 +14,26 @@
 
   <div class="form-group">
     <label for="movie">Movie Name:</label>
+    <ul>
+       <li>Only allows capital/lowercase letters, numbers, spaces, commas, colons, and dashes.</li>
+    </ul>
     <%= form.text_field :movie, class: "form-control" %>
   </div>
 
   <div class="form-group">
     <label for="genre">Genre:</label>
+    <ul>
+       <li>Only allows capital/lowercase letters, spaces, and commas.</li>
+    </ul>
     <%= form.text_field :genre, class: "form-control" %>
   </div>
 
+ 
   <div class="form-group">
     <label for="age_rating">Age_Rating:</label>
+      <div class="col">
     <%= form.select :age_rating, ['G', 'PG','PG-13','R','NC-17']%> 
+      </div>
   </div>
 
   <div class="form-group">
