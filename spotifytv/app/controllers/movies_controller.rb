@@ -3,11 +3,16 @@ class MoviesController < ApplicationController
 
   # GET /movies or /movies.json
   def index
-    @movies = Movie.all
+      @movies = Movie.order(params[:sort])
   end
-
+def search
+    if @movies = Movie.all.find{|movie| movie.movie.include?(params[:search])}
+      redirect_to movies_path(@movie)
+    end
+  end
   # GET /movies/1 or /movies/1.json
   def show
+       @movies = Movie.find(params[:id])
   end
 
   # GET /movies/new

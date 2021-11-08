@@ -6,11 +6,31 @@
     body {
   background-color: rgb(35,35,35);
     }
+    .info {
+        color:grey;
+    }
+    img{
+        max-width: 40%;
+        height:auto;
+    }
+    .header{
+        text-align:center;
+    }
 </style>
 
 <div class="container">  
     <br/>
-        <div class="table-responsive">        
+    <div class="header">
+        <img src="https://lh3.googleusercontent.com/proxy/H6xtFGGtj6o6VvrMzuTC4Stpk4dyOiqn8N3eMi0dzpQQZRJDA0jBCemf1Xa7uJ4xZJeNgeAfeeqViMoRC9U-fH3WbJHbl4-lpZxMtYd4zLQAD_k">
+        <h2>Name</h2>
+        <div>Edit Account</div>
+    </div>
+    <div>Username: <span class="info">user</span></div>
+    <div>Password: <span class="info">password</span></div>
+    <div>Follower: <span class="info">#</span></div>
+    <div>Following: <span class="info">#</span></div>
+    <br/>
+  <div class="table-responsive">        
   <table class="table table-dark table-hover">
   <thead>
     <tr>
@@ -26,7 +46,7 @@
         <td><%= account.name %></td>
         <td><%= account.password %></td>
         <td><%= link_to '', account, class: "fas fa-eye" %></td>
-        <td><%= link_to '', edit_movie_path(account), class: "fas fa-edit" %> </td>
+        <td><%= link_to '', edit_account_path(account), class: "fas fa-edit" %> </td>
         <td><%= link_to '', account, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
       </tr>
     <% end %>
