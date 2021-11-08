@@ -29,11 +29,12 @@
 
   <div class="form-group">
     <label for="release_date">Release_Date:</label>
-    <%= form.text_field :release_date, class: "form-control", placeholder: "MM/DD/YYYY"  %>
+    <%= form.date_field :release_date, class: "date picker", placeholder: "MM/DD/YYYY"  %>
   </div>
 
 <div class="col-xs-12" style="height:20px;"></div>
   <div class="actions">
     <%= form.submit :Submit, class: 'btn btn-success' %>
   </div>
+
 <% end %>

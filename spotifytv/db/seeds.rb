@@ -77,61 +77,61 @@ more_movies = [
     :release_date => '04/22/2001'},
     #1
   {:movie => 'Bee Movie', :likes => "1", :dislikes => "1", :comments => "10", :genre => "Comedy, Animated", :age_rating => "G", 
-    :release_date => '11/02/2007'},
+    :release_date => '2007-11-02'},
     #2
   {:movie => 'Joker', :likes => "5", :dislikes => "3", :comments => "16", :genre => "Thriller, Crime Film, Drama", :age_rating => "R", 
-    :release_date => '10/04/2019'},
+    :release_date => '2019-10-04'},
    #3
   {:movie => 'Dune', :likes => "0", :dislikes => "0", :comments => "0", :genre => "Sci Fi", :age_rating => "PG-13", 
-    :release_date => '10/22/2021'},
+    :release_date => '2021-10-22'},
    #4
   {:movie => 'Inception', :likes => "100", :dislikes => "1", :comments => "3", :genre => "Drama, Heist", :age_rating => "PG-13", 
-    :release_date => '06/13/2010'},
+    :release_date => '2010-06-13'},
    #5
   {:movie => 'Dodgeball', :likes => "7", :dislikes => "10", :comments => "10", :genre => "Comedy", :age_rating => "PG-13", 
-    :release_date => '06/18/2004'},
+    :release_date => '2004-06-18'},
    #6
   {:movie => 'Shrek 2', :likes => "99999", :dislikes => "0", :comments => "21", :genre => "Comedy, Fantasy, Animated", :age_rating => "G", 
-    :release_date => '11/04/2021'},
+    :release_date => '2021-11-04'},
     #7
   {:movie => 'Shrek the Third', :likes => "0", :dislikes => "96", :comments => "0", :genre => "Comedy, Fantasy, Animated", :age_rating => "G", 
-    :release_date => '5/18/2007'},
+    :release_date => '2007-5-18'},
     #8
   {:movie => 'Happy Feet 2', :likes => "0", :dislikes => "1000000", :comments => "999", :genre => "Animated", :age_rating => "G", 
-    :release_date => '11/18/2011'},
+    :release_date => '2011-11-18'},
     #9
   {:movie => 'Happy Feet', :likes => "1", :dislikes => "500", :comments => "100", :genre => "Animated", :age_rating => "G", 
-    :release_date => '11/17/2006'},
+    :release_date => '2006-11-17'},
     #10
     {:movie => 'Armagedon', :likes => "5", :dislikes => "3", :comments => "16", :genre => "Thriller, Drama", :age_rating => "R", 
-    :release_date => '06/30/1998'},
+    :release_date => '1998-06-30'},
     #11
   {:movie => 'Bolt', :likes => "0", :dislikes => "96", :comments => "0", :genre => "Animated", :age_rating => "G", 
-    :release_date => '05/18/2007'},
+    :release_date => '2007-05-18'},
     #12
   {:movie => 'Jaws', :likes => "5", :dislikes => "3", :comments => "16", :genre => "Thriller", :age_rating => "R", 
-    :release_date => '06/20/1975'},
+    :release_date => '1975-06-20'},
    #13
   {:movie => 'Billy Madison', :likes => "0", :dislikes => "96", :comments => "0", :genre => "Comedy", :age_rating => "PG-13", 
-    :release_date => '02/10/1995'},
+    :release_date => '1995-02-10'},
    #14
   {:movie => 'Happy Gilmore', :likes => "2", :dislikes => "1", :comments => "3", :genre => "Comedy", :age_rating => "PG-13", 
-    :release_date => '02/16/1996'},
+    :release_date => '1996-02-16'},
    #15
   {:movie => 'Madagascar', :likes => "1", :dislikes => "1", :comments => "10", :genre => "Animated", :age_rating => "PG", 
-    :release_date => '05/27/2005'},
+    :release_date => '2005-05-27'},
    #16
   {:movie => 'Madagascar: Escape 2 Africa', :likes => "5", :dislikes => "3", :comments => "16", :genre => "Animated", :age_rating => "PG", 
-    :release_date => '11/07/2008'},
+    :release_date => '2008-11-07'},
     #17
   {:movie => "Madagascar 3: Europes most wanted", :likes => "0", :dislikes => "96", :comments => "0", :genre => "Animated", :age_rating => "PG", 
-    :release_date => '6/08/2012'},
+    :release_date => '2012-6-08'},
     #18
   {:movie => 'Shark Tale', :likes => "1", :dislikes => "13", :comments => "1", :genre => "Animated", :age_rating => "PG", 
-    :release_date => '10/01/2004'},
+    :release_date => '2004-10-01'},
     #19
   {:movie => 'The Nightmare Before Christmas', :likes => "20", :dislikes => "3", :comments => "7", :genre => "Holiday, Artsy", :age_rating => "PG", 
-    :release_date => '10/13/1993'}
+    :release_date => '1993-10-13'}
     #20
     
  ]

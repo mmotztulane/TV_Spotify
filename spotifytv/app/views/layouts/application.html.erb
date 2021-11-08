@@ -21,6 +21,7 @@
             background-color: green;
           }
     </style>
+    <link rel= "stylsesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -104,5 +105,10 @@
   </div>
   <!-- Copyright -->
 </footer>
+       <script type="text/javascript">
+          $(document).ready(function(){
+            $('.datepicker').datepicker();
+          });
+       </script>
   </body>
 </html>
