@@ -88,6 +88,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    hashie (5.0.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
@@ -108,6 +109,8 @@ GEM
     mini_portile2 (2.6.1)
     minitest (5.14.4)
     msgpack (1.4.2)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
     nenv (0.3.0)
     nio4r (2.5.8)
     nokogiri (1.12.5)
@@ -116,13 +119,18 @@ GEM
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    pg (0.21.0)
+    omniauth (2.0.4)
+      hashie (>= 3.4.6)
+      rack (>= 1.6.2, < 3)
+      rack-protection
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
     puma (3.12.6)
     racc (1.6.0)
     rack (2.2.3)
+    rack-protection (2.1.0)
+      rack
     rack-proxy (0.7.0)
       rack
     rack-test (1.1.0)
@@ -184,6 +192,7 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.3)
+    ruby2_keywords (0.0.5)
     ruby_dep (1.5.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -199,6 +208,11 @@ GEM
     shellany (0.0.1)
     simple_calendar (1.1.10)
       rails (>= 3.0)
+    sinatra (2.1.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
+      tilt (~> 2.0)
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -240,7 +254,7 @@ DEPENDENCIES
   guard-rspec
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
-  pg (~> 0.21)
+  omniauth
   puma (~> 3.11)
   rails (~> 6.0.0)
   rails_12factor
@@ -248,6 +262,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5)
   simple_calendar (~> 1.1.0)
+  sinatra
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   web-console (>= 3.3.0)

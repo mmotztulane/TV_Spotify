@@ -32,6 +32,9 @@ gem "simple_calendar", "~> 1.1.0"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'omniauth'
+gem 'sinatra'
+
 group :development, :test do
     gem 'sqlite3', '~> 1.4'
     gem 'rspec-rails'
@@ -58,7 +61,7 @@ group :test do
 end
 
 group :production do 
-   gem 'pg', '~> 0.21'
+   #gem 'pg', '~> 0.21'
    gem 'rails_12factor'
 end
 
