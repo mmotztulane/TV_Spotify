@@ -71,4 +71,5 @@ def search
     def movie_params
       params.require(:movie).permit(:movie, :likes, :dislikes, :comments, :genre, :age_rating, :release_date)
     end
+ 
 end
