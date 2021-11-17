@@ -4,6 +4,15 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     @users = User.all
+    
+    @title = params[:title] if params[:title]
+      
+      set_session(@title)
+      
+    if !@title
+      @title = get_title() unless @title
+      redirect_to users_path({title: @title}) 
+    end
   end
 
   # GET /users/1 or /users/1.json
@@ -66,4 +75,16 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:username, :reaction, :comment, :login_id, :movie_id)
     end
+    
+    def set_session(title)
+        session[:title] = title if title
+    end
+    
+  def get_title()
+    if session[:title] then session[:title]
+      else "title"
+    end
+  end
+      
+  
 end

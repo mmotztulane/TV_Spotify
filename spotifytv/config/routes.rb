@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users
-  root :to => redirect('/users')
+  root :to => redirect('/movies')
   get "settings", to: "settings#index"
   resources :accounts
   resources :movies

@@ -29,7 +29,7 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= movie.movie %></td>
+        <td><%= link_to movie.movie, users_path(title: movie.id), :id => movie.id %></td>
         <td><%= movie.likes %></td>
         <td><%= movie.dislikes %></td>
         <td><%= movie.comments %></td>

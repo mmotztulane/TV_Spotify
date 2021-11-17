@@ -40,7 +40,7 @@
   </div>
     
   <div class="field form-group">
-    <%= form.number_field :movie_id, id: :user_movie_id, class:"form-control", value: "1", type: :hidden %>
+    <%= form.number_field :movie_id, id: :user_movie_id, class:"form-control", value: session[:title], type: :hidden %>
   </div>
 
 <div class="col-xs-12" style="height:20px;"></div>

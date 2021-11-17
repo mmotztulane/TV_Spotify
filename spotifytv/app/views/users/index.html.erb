@@ -23,15 +23,17 @@
 
       <tbody>
         <% @users.each do |user| %>
-          <tr>
-            <td><%= user.get_name %></td>
-            <td><%= user.reaction %></td>
-            <td><%= user.comment %></td>
-            <td><%= link_to '', user, class: "fas fa-eye" %></td>
-            <% if user.get_name == name %>
-                <td><%= link_to '', edit_user_path(user), class: "fas fa-edit" %> </td>
-                <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
-            <% end %>
+          <% if user.movie_id.to_s == params[:title] %>
+              <tr>
+                <td><%= user.get_name %></td>
+                <td><%= user.reaction %></td>
+                <td><%= user.comment %></td>
+                <td><%= link_to '', user, class: "fas fa-eye" %></td>
+                <% if user.get_name == name %>
+                    <td><%= link_to '', edit_user_path(user), class: "fas fa-edit" %> </td>
+                    <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
+                <% end %>
+               <% end %>
           </tr>
         <% end %>
       </tbody>

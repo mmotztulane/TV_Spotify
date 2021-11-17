@@ -9,4 +9,8 @@ class User < ApplicationRecord
   def get_name
     return Login.id_to_name self[:login_id]
   end
+    
+  def get_movie
+    return self[:movie_id]
+  end
 end
