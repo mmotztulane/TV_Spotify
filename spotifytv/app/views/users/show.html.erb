@@ -1,14 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<style>
-    body {
-  background-color: rgb(35,35,35);
-    }
-</style>
-
 <p>
-  <strong>Username:</strong>
-  <%= @user.username %>
+  <strong>Email:</strong>
+  <%= @user.get_name %>
 </p>
 
 <p>
@@ -22,5 +16,9 @@
 </p>
 
 <div class="col-xs-12" style="height:30px;"></div>
-<%= link_to 'Edit', edit_user_path(@user),class: "btn btn-secondary btn-sm" %> |
+<% name = current_login.present? ? current_login.email : 'none' %>
+<% if @user.get_name == name %>
+    <%= link_to 'Edit', edit_user_path(@user),class: "btn btn-secondary btn-sm" %> |
+<% end %>
+
 <%= link_to 'Back', users_path, class: "btn btn-secondary btn-sm" %>

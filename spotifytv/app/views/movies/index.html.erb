@@ -1,11 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Movies</h1>
-<style>
-    body {
-  background-color: rgb(35,35,35);
-    }
-</style>
+
 <br/>
 <div class="header">
 <%= form_tag(movies_path, method: :get) do %>
@@ -33,7 +29,7 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= movie.movie %></td>
+        <td><%= link_to movie.movie, users_path(title: movie.id), :id => movie.id %></td>
         <td><%= movie.likes %></td>
         <td><%= movie.dislikes %></td>
         <td><%= movie.comments %></td>
