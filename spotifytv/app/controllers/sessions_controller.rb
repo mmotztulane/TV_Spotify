@@ -8,12 +8,12 @@ class SessionsController < ApplicationController
     if user && (params[:session][:password]== user.password)
       # Log the user in and redirect to the user's show page.
       log_in user
-      format.html { redirect_to @account, notice: "Login successfully." }
-      format.json { render :show, status: :created, location: @account }
+      redirect_to accounts_path, notice: "Login successfully." 
+      
     else
       # Create an error message.(does not work)
-      format.html { redirect_to @login, notice: "Wrong username and password combination." }
-      render 'new'
+      redirect_to login_path, notice: "Wrong username and password combination." 
+      
     end
   end
 
