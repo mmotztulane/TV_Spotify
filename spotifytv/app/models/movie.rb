@@ -5,4 +5,5 @@ class Movie < ActiveRecord::Base
     message: "Only allows letters and spaces." }, length: { in: 1..40 }
   validates :release_date, length: { in: 10..10 }
   has_many :users
+    
 end
