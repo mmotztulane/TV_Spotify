@@ -130,6 +130,7 @@ GEM
       rack (>= 1.6.2, < 3)
       rack-protection
     orm_adapter (0.5.0)
+    pg (0.21.0)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -268,6 +269,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   omniauth
+  pg (~> 0.21)
   puma (~> 3.11)
   rails (~> 6.0.0)
   rails_12factor
