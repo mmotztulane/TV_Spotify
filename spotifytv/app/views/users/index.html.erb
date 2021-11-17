@@ -1,12 +1,8 @@
 <p id="notice"><%= notice %></p>
+<% name = current_login.present? ? current_login.email : 'none' %>
 
 <h1>Opinions on Shrek</h1>
 
-<style>
-    body {
-  background-color: rgb(35,35,35);
-    }
-</style>
 
 <div class="header">
      
@@ -27,13 +23,17 @@
 
       <tbody>
         <% @users.each do |user| %>
-          <tr>
-            <td><%= user.username %></td>
-            <td><%= user.reaction %></td>
-            <td><%= user.comment %></td>
-            <td><%= link_to '', user, class: "fas fa-eye" %></td>
-            <td><%= link_to '', edit_user_path(user), class: "fas fa-edit" %> </td>
-            <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
+          <% if user.movie_id.to_s == params[:title] %>
+              <tr>
+                <td><%= user.get_name %></td>
+                <td><%= user.reaction %></td>
+                <td><%= user.comment %></td>
+                <td><%= link_to '', user, class: "fas fa-eye" %></td>
+                <% if user.get_name == name %>
+                    <td><%= link_to '', edit_user_path(user), class: "fas fa-edit" %> </td>
+                    <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
+                <% end %>
+               <% end %>
           </tr>
         <% end %>
       </tbody>
@@ -42,6 +42,8 @@
 
 <br>
 
-<a href="users/new" class="btn btn-primary">New Opinion on Shrek</a>
+<% if login_signed_in? %>
+    <a href="users/new" class="btn btn-primary">New Opinion on Shrek</a>
+<% end %>
 
 <!-- <%= link_to 'New User', new_user_path %> -->

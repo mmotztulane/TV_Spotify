@@ -4,6 +4,7 @@ class MoviesController < ApplicationController
   # GET /movies or /movies.json
   def index
       @movies = Movie.order(params[:sort])
+      
   end
 def search
     if @movies = Movie.all.find{|movie| movie.movie.include?(params[:search])}
@@ -71,5 +72,5 @@ def search
     def movie_params
       params.require(:movie).permit(:movie, :likes, :dislikes, :comments, :genre, :age_rating, :release_date)
     end
- 
+
 end
