@@ -5,6 +5,7 @@ class Login < ApplicationRecord
          :recoverable, :rememberable, :validatable
     
     has_many :logins
+    has_many :movies, :through => :logins
     
     def self.id_to_name id
         login = Login.where(id: id)

@@ -38,6 +38,10 @@
   <div class="field form-group">
     <%= form.number_field :login_id, id: :user_login_id, class:"form-control", value: current_login.id, type: :hidden %>
   </div>
+    
+  <div class="field form-group">
+    <%= form.number_field :movie_id, id: :user_movie_id, class:"form-control", value: "1", type: :hidden %>
+  </div>
 
 <div class="col-xs-12" style="height:20px;"></div>
   <div class="actions">

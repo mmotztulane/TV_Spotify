@@ -50,7 +50,9 @@ ActiveRecord::Schema.define(version: 2021_11_17_052708) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "login_id"
+    t.integer "movie_id"
     t.index ["login_id"], name: "index_users_on_login_id"
+    t.index ["movie_id"], name: "index_users_on_movie_id"
   end
 
 end

@@ -4,4 +4,5 @@ class Movie < ActiveRecord::Base
   validates :genre, format: { with: /\A[a-z ,]*\Z/i,
     message: "Only allows letters and spaces." }, length: { in: 1..40 }
   validates :release_date, length: { in: 10..10 }
+  has_many :users
 end
