@@ -11,15 +11,15 @@
       </ul>
     </div>
   <% end %>
-
+<!--
   <div class="form-group" >
     <label for="Username">Username:</label>
     <ul>
        <li>Only allows capital/lowercase letters and numbers.</li>
     </ul>
-    <%= form.text_field :username, class: "form-control", placeholder: "Letters and Numbers" %>
+    <%= form.text_field :username, class: "form-control", placeholder: "Letters and Numbers", type: :hidden %>
   </div>
-
+-->
   <div class="form-group">
     <label for="Reaction">Reaction:</label>
       <div class="col">
@@ -33,6 +33,10 @@
        <li>Only allows letters, numbers, commas, spaces, and end of sentence punctuation.</li>
     </ul>
     <%= form.text_field :comment, class: "form-control", placeholder: "optional" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.number_field :login_id, id: :user_login_id, class:"form-control", value: current_login.id, type: :hidden %>
   </div>
 
 <div class="col-xs-12" style="height:20px;"></div>
