@@ -9,6 +9,14 @@ class Movie < ActiveRecord::Base
   def comment_count
      return self.users.count
   end
+  
+  def like_count
+     return self.users.where(:reaction => "Like").count
+  end
+    
+  def dislike_count
+     return self.users.where(:reaction => "Dislike").count
+  end
     
      def self.id_to_name id
         movie = Movie.where(id: id)

@@ -30,8 +30,8 @@
     <% @movies.each do |movie| %>
       <tr>
         <td><%= link_to movie.movie, users_path(title: movie.id), :id => movie.id %></td>
-        <td><%= movie.likes %></td>
-        <td><%= movie.dislikes %></td>
+        <td><%= movie.like_count %></td>
+        <td><%= movie.dislike_count %></td>
         <td><%= movie.comment_count %></td>
         <td><%= movie.genre %></td>
         <td><%= movie.age_rating %></td>
