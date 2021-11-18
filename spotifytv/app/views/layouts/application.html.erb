@@ -61,10 +61,12 @@
       
 
   </div>
-        <% if login_signed_in? %>
-          <li class="navbar-nav ml-auto" >Hello <%= current_login.email %></li>
-        <% end %>
-      <br>
+       <form class="form-search" method="get" id="s" action="/">
+    <div class="input-append">
+        <input type="text" class="input-medium search-query" name="s" placeholder="Search" value="">
+        <button type="submit" class="add-on primary">Search</button>
+    </div>
+</form>
           
 </nav>
       <p class="notice"><%= notice %></p>

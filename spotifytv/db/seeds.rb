@@ -5,7 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-more_users = [
+<<-DOC
+    more_users = [
   {:username => 'Max25', :reaction => 'Like',
     :comment => 'Entertaining throughout!'},
     #1
@@ -71,7 +72,7 @@ more_users = [
 more_users.each do |user|
   User.create!(user)
 end
-
+DOC
 more_movies = [
   {:movie => 'Shrek', :likes => "2", :dislikes => "1", :comments => "3", :genre => "Comedy, Fantasy, Animated", :age_rating => "G", 
     :release_date => '04/22/2001'},
@@ -194,6 +195,8 @@ more_movies.each do |movie|
   Movie.create!(movie)
 end
 
+<<-DOC
+
 more_accounts = [
     {:name => 'Abc', :password => 'abc123'},
     
@@ -240,3 +243,5 @@ more_accounts = [
 more_accounts.each do |account|
   Account.create!(account)
 end
+
+DOC
