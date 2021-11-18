@@ -1,7 +1,16 @@
-body {
-    background-color: rgb(35,35,35);
-}
-
+    body {
+  background-color: rgb(35,35,35);
+    }
+    .info {
+        color:grey;
+    }
+    img{
+        max-width: 40%;
+        height:auto;
+    }
+    .header{
+        text-align:center;
+    }
 .navbar{
   background: #348535 !important;
 }

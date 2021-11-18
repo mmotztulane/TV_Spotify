@@ -40,7 +40,8 @@
 <br>
 
 <% if login_signed_in? %>
-    <% if current_login.get_has_comments == 0 %>
+    <% if current_login.get_has_comments %>
+        <p><%= current_login.get_has_comments %></p>
         <a href="users/new" class="btn btn-primary">New Opinion</a>
     <% end %>
 <% end %>

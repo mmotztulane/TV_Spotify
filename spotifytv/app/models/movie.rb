@@ -18,9 +18,6 @@ class Movie < ActiveRecord::Base
      return self.users.where(:reaction => "Dislike").count
   end
     
-  def has_comments
-     return self.users.where(:login_id => current_user.id).count
-  end
   
     
      def self.id_to_name id
