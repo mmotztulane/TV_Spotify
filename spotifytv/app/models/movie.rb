@@ -19,13 +19,4 @@ class Movie < ActiveRecord::Base
   end
     
  
-  
-    
-     def self.id_to_name id
-        movie = Movie.where(id: id)
-        if movie.length() == 0
-          return "Movie"
-        end
-        return movie[0].movie # replace when first/last names are added
-      end
 end

@@ -9,6 +9,7 @@
         <h2><%= current_login.email %></h2>
         <div><a>Edit Account</a></div>
     </div>
+ 
     <div>Email: <span class="info"><%= current_login.email %></span></div>
     <div>Followers: <span class="info">0</span></div>
     <div>Following: <span class="info">0</span></div>
@@ -35,9 +36,11 @@
                 <td><%= user.get_name %></td>
                 <td><%= user.reaction %></td>
                 <td><%= user.comment %></td>
+                <!--
                 <td><%= link_to '', user, class: "fas fa-eye" %></td>
                 <td><%= link_to '', edit_user_path(user), class: "fas fa-edit" %> </td>
                 <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
+                   -->
               <% end %>
                
           </tr>

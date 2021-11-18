@@ -96,7 +96,7 @@ more_movies = [
     :release_date => '2021-11-04'},
     #7
   {:movie => 'Shrek the Third', :likes => "0", :dislikes => "96", :comments => "0", :genre => "Comedy, Fantasy, Animated", :age_rating => "G", 
-    :release_date => '2007-5-18'},
+    :release_date => '2007-05-18'},
     #8
   {:movie => 'Happy Feet 2', :likes => "0", :dislikes => "1000000", :comments => "999", :genre => "Animated", :age_rating => "G", 
     :release_date => '2011-11-18'},
@@ -126,7 +126,7 @@ more_movies = [
     :release_date => '2008-11-07'},
     #17
   {:movie => "Madagascar 3: Europes most wanted", :likes => "0", :dislikes => "96", :comments => "0", :genre => "Animated", :age_rating => "PG", 
-    :release_date => '2012-6-08'},
+    :release_date => '2012-06-08'},
     #18
   {:movie => 'Shark Tale', :likes => "1", :dislikes => "13", :comments => "1", :genre => "Animated", :age_rating => "PG", 
     :release_date => '2004-10-01'},

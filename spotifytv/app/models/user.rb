@@ -9,13 +9,5 @@ class User < ActiveRecord::Base
   def get_name
     return Login.id_to_name self[:login_id]
   end
-    
-  def get_movie
-    return Movie.id_to_name self[:movie_id]
-  end
   
-  def get_has_comments
-      return Movie.has_comments self[params[:title]]
-  end
-
 end
