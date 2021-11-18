@@ -75,7 +75,7 @@ end
 DOC
 more_movies = [
   {:movie => 'Shrek', :likes => "2", :dislikes => "1", :comments => "3", :genre => "Comedy, Fantasy, Animated", :age_rating => "G", 
-    :release_date => '04/22/2001'},
+    :release_date => '2001-04-22'},
     #1
   {:movie => 'Bee Movie', :likes => "1", :dislikes => "1", :comments => "10", :genre => "Comedy, Animated", :age_rating => "G", 
     :release_date => '2007-11-02'},
