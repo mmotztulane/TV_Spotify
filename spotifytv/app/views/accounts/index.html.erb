@@ -20,36 +20,43 @@
 <div class="container">  
     <br/>
     <div class="header">
-        <img src="https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/User-green.png">
-        <h2>Name</h2>
-        <div>Edit Account</div>
+        <%= image_tag 'defaultprofile.png', alt: current_login.email , class: 'd-block mx-auto' %>
+        <h2><%= current_login.email %></h2>
     </div>
-    <div>Username: <span class="info">user</span></div>
-    <div>Password: <span class="info">password</span></div>
-    <div>Follower: <span class="info">#</span></div>
-    <div>Following: <span class="info">#</span></div>
+    <div>Email: <span class="info"><%= current_login.email %></span></div>
+    <div>Followers: <span class="info">0</span></div>
+    <div>Following: <span class="info">0</span></div>
     <br/>
-  <div class="table-responsive">        
+  <div class="table-responsive"> 
+      
+  <h3>All your posts:</h3>
   <table class="table table-dark table-hover">
   <thead>
-    <tr>
-      <th>Username</th>
-      <th>Password</th>
-     <th colspan="3"></th>
-    </tr>
-  </thead>
+        <tr>
+          <th>Movie</th>
+          <th>Email</th>
+          <th>Reaction</th>
+          <th>Comment</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
   <tbody>
-    <% @accounts.each do |account| %>
-      <tr>
-        <td><%= account.name %></td>
-        <td><%= account.password %></td>
-        <td><%= link_to '', account, class: "fas fa-eye" %></td>
-        <td><%= link_to '', edit_account_path(account), class: "fas fa-edit" %> </td>
-        <td><%= link_to '', account, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
-      </tr>
-    <% end %>
-  </tbody>
+        <% @users.each do |user| %>
+             <% if user.get_name == current_login.email %>
+              <tr>
+                <td><%= Movie.where(id: user.movie_id)[0].movie  %></td>
+                <td><%= user.get_name %></td>
+                <td><%= user.reaction %></td>
+                <td><%= user.comment %></td>
+                <td><%= link_to '', user, class: "fas fa-eye" %></td>
+                <td><%= link_to '', edit_user_path(user), class: "fas fa-edit" %> </td>
+                <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
+              <% end %>
+               
+          </tr>
+        <% end %>
+      </tbody>
 </table>
 </div>
     </div>  

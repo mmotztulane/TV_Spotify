@@ -28,6 +28,7 @@ def search
   # POST /movies or /movies.json
   def create
     @movie = Movie.new(movie_params)
+      
 
     respond_to do |format|
       if @movie.save

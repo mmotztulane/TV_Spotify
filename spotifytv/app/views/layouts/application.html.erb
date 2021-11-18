@@ -39,16 +39,14 @@
       <li class="nav-item">
         <a class="nav-link" href="/movies">Movies</a>
       </li>
-     <li class="nav-item">
-        <a class="nav-link" href="/accounts">Account</a>
-      </li>
-       <li class="nav-item">
-            <a class="nav-link" href="/settings">Settings</a>
-       </li>
        <% if login_signed_in? %>
             <li class="nav-item">
+                <a class="nav-link" href="/accounts">Account</a>
+            </li>
+            <li class="nav-item">
                 <%= link_to 'Log out',  destroy_login_session_path, method: :delete, class: 'nav-link'%>
-        </li>
+            </li>
+            
        <% else %>
              <li class="nav-item">
                 <%= link_to 'Register',  new_login_registration_path, class: 'nav-link'%>
@@ -89,13 +87,9 @@
 
         <ul class="list-unstyled mb-0 ">
           <li>
-            <a href="/users" class="text-white">Opinions</a>
-             |
-            <a href="/movies" class="text-white">Movie</a>
+            <a href="/movies" class="text-white">Movies</a>
              |
             <a href="/accounts" class="text-white">Account</a>
-             |
-            <a href="/settings" class="text-white">Settings</a>
             </li>
         </ul>
       </div>

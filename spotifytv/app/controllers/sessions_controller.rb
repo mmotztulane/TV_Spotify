@@ -13,7 +13,6 @@ class SessionsController < ApplicationController
     else
       # Create an error message.(does not work)
       redirect_to login_path, notice: "Wrong username and password combination." 
-      
     end
   end
 

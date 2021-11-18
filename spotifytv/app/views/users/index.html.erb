@@ -1,20 +1,18 @@
 <p id="notice"><%= notice %></p>
 <% name = current_login.present? ? current_login.email : 'none' %>
-
-<h1>Opinions on Shrek</h1>
+<h1>Opinions on <%= Movie.where(id: params[:title])[0].movie %></h1>
 
 
 <div class="header">
      
      </div>
 
-<%= image_tag 'Shrek.jpg', alt: 'Shrek', class: 'd-block mx-auto' %>
 
 <div class="table-responsive">        
   <table class="table table-dark table-hover">
       <thead>
         <tr>
-          <th>Username</th>
+          <th>Email</th>
           <th>Reaction</th>
           <th>Comment</th>
           <th colspan="3"></th>
@@ -43,7 +41,7 @@
 <br>
 
 <% if login_signed_in? %>
-    <a href="users/new" class="btn btn-primary">New Opinion on Shrek</a>
+    <a href="users/new" class="btn btn-primary">New Opinion</a>
 <% end %>
 
 <!-- <%= link_to 'New User', new_user_path %> -->

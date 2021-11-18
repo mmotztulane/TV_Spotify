@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   end
     
   def get_movie
-    return self[:movie_id]
+    return Movie.id_to_name self[:movie_id]
   end
 
 end
