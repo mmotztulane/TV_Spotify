@@ -5,7 +5,7 @@
 
 <div class="header"></div>
 
-<%= image_tag '1.jpg', alt: 'Shrek' , class: 'd-block mx-auto' %>
+<!-- <%= image_tag '1.jpg', alt: 'Shrek' , class: 'd-block mx-auto' %> -->
 
 <div class="table-responsive">        
   <table class="table table-dark table-hover">
@@ -40,10 +40,7 @@
 <br>
 
 <% if login_signed_in? %>
-    <% if current_login.get_has_comments %>
-        <p><%= current_login.get_has_comments %></p>
         <a href="users/new" class="btn btn-primary">New Opinion</a>
-    <% end %>
 <% end %>
 
 <!-- <%= link_to 'New User', new_user_path %> -->
