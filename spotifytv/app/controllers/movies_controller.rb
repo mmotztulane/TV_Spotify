@@ -28,6 +28,7 @@ def search
   # POST /movies or /movies.json
   def create
     @movie = Movie.new(movie_params)
+      
 
     respond_to do |format|
       if @movie.save
@@ -70,7 +71,7 @@ def search
 
     # Only allow a list of trusted parameters through.
     def movie_params
-      params.require(:movie).permit(:movie, :likes, :dislikes, :comments, :genre, :age_rating, :release_date)
+      params.require(:movie).permit(:movie, :likes, :dislikes, :comments, :genre_ids[1], :age_rating, :release_date)
     end
 
 end

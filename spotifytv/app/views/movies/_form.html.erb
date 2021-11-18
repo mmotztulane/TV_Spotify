@@ -22,11 +22,16 @@
 
   <div class="form-group">
     <label for="genre">Genre:</label>
-    <ul>
-       <li>Only allows capital/lowercase letters, spaces, and commas.</li>
-    </ul>
-    <%= form.text_field :genre, class: "form-control" %>
-  </div>
+    <div class="field">
+  <%= form.collection_check_boxes :genre_ids, Genre.all, :id, :name do |b| %>
+    <div class="collection-check-box">
+      <%= b.label %>
+      <%= b.check_box %>
+    </div>
+  <% end %>
+</div>
+
+</div>
 
  
   <div class="form-group">

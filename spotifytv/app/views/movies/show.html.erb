@@ -34,9 +34,6 @@
   <strong>Release date:</strong>
   <%= @movie.release_date %>
 </p>
-<button type="button" class="btn btn-info">Add Comment</button><br/><br/>
-<button type="button" class="btn btn-success">Like</button>
-<button type="button" class="btn btn-danger">Dislike</button>
 <div class="col-xs-12" style="height:30px;"></div>
 <%= link_to 'Edit', edit_movie_path(@movie),class: "btn btn-secondary btn-sm" %> |
 <%= link_to 'Back', movies_path, class: "btn btn-secondary btn-sm" %>
