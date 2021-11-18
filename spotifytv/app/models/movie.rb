@@ -6,6 +6,10 @@ class Movie < ActiveRecord::Base
   validates :release_date, length: { in: 10..10 }
   has_many :users, dependent: :delete_all
     
+  def comment_count
+     return self.users.count
+  end
+    
      def self.id_to_name id
         movie = Movie.where(id: id)
         if movie.length() == 0

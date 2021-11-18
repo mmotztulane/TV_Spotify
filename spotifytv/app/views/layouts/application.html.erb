@@ -88,8 +88,10 @@
         <ul class="list-unstyled mb-0 ">
           <li>
             <a href="/movies" class="text-white">Movies</a>
+            <% if login_signed_in? %>
              |
             <a href="/accounts" class="text-white">Account</a>
+            <% end %>
             </li>
         </ul>
       </div>

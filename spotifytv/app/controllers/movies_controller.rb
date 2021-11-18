@@ -20,6 +20,7 @@ def search
   def new
     @movie = Movie.new
   end
+    
 
   # GET /movies/1/edit
   def edit
