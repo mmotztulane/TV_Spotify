@@ -18,10 +18,12 @@
 </style>
 
 <div class="container">  
-    <br/>
+
+
     <div class="header">
         <%= image_tag 'defaultprofile.png', alt: current_login.email , class: 'd-block mx-auto' %>
         <h2><%= current_login.email %></h2>
+        <div><a>Edit Account</a></div>
     </div>
     <div>Email: <span class="info"><%= current_login.email %></span></div>
     <div>Followers: <span class="info">0</span></div>

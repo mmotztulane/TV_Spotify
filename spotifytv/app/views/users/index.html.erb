@@ -40,7 +40,9 @@
 <br>
 
 <% if login_signed_in? %>
-    <a href="users/new" class="btn btn-primary">New Opinion</a>
+    <% if current_login.get_has_comments == 0 %>
+        <a href="users/new" class="btn btn-primary">New Opinion</a>
+    <% end %>
 <% end %>
 
 <!-- <%= link_to 'New User', new_user_path %> -->

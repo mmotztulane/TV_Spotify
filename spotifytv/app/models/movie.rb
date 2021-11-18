@@ -7,7 +7,7 @@ class Movie < ActiveRecord::Base
   has_many :users, dependent: :delete_all
     
   def comment_count
-     return self.users.count
+     return self.users.where.not(:comment => "No Comment").count
   end
   
   def like_count
@@ -17,6 +17,11 @@ class Movie < ActiveRecord::Base
   def dislike_count
      return self.users.where(:reaction => "Dislike").count
   end
+    
+  def has_comments
+     return self.users.where(:login_id => current_user.id).count
+  end
+  
     
      def self.id_to_name id
         movie = Movie.where(id: id)

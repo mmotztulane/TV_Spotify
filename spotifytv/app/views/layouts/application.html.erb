@@ -46,6 +46,7 @@
             <li class="nav-item">
                 <%= link_to 'Log out',  destroy_login_session_path, method: :delete, class: 'nav-link'%>
             </li>
+  
             
        <% else %>
              <li class="nav-item">
@@ -57,7 +58,14 @@
             
         <% end %>
       </ul>
+      
+
   </div>
+        <% if login_signed_in? %>
+          <li class="navbar-nav ml-auto" >Hello <%= current_login.email %> </li>
+        <% end %>
+      <br>
+          
 </nav>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>

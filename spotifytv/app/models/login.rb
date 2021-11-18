@@ -7,6 +7,10 @@ class Login < ApplicationRecord
     has_many :logins
     has_many :movies, :through => :logins
     
+    def get_has_comments
+      return Movie.has_comments self[:id]
+    end
+    
     def self.id_to_name id
         login = Login.where(id: id)
         if login.length() == 0
