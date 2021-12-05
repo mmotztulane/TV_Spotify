@@ -5,6 +5,7 @@ class Movie < ActiveRecord::Base
     message: "Only allows letters and spaces." }, length: { in: 1..40 }
   validates :release_date, length: { minimum: 5 }
   has_many :users, dependent: :delete_all
+  has_one_attached :image
     
   def comment_count
      return self.users.where.not(:comment => "No Comment").count
@@ -18,5 +19,8 @@ class Movie < ActiveRecord::Base
      return self.users.where(:reaction => "Dislike").count
   end
     
+  def get_name
+      self.movie
+  end
  
 end
