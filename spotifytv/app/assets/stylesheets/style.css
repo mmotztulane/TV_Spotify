@@ -2,7 +2,7 @@
   background-color: rgb(35,35,35);
     }
     .info {
-        color:grey;
+        color:#32CD32;
     }
     img{
         max-width: 40%;
@@ -13,4 +13,10 @@
     }
 .navbar{
   background: #348535 !important;
+}
+
+/* Used for links in the movies tab */
+a {color: #32CD32;}
+a:hover { /* Background color in nav */
+  color: #348535;
 }
