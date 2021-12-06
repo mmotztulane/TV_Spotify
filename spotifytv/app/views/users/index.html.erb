@@ -8,7 +8,8 @@
 <% if current_movie.image.attached? %>
                <%= image_tag (url_for(current_movie.image)), alt: current_movie.movie, class:'d-block mx-auto', size: '250x250' %>
         <% else %>
-              <%= image_tag current_movie.movie + '.jpg', alt: current_movie.movie , class:'d-block mx-auto', size: '250x250' %>
+             <%= image_tag current_movie.get_photo, alt: current_movie.movie , class:'d-block mx-auto', size: '250x250' %>
+               
 <% end %>
 
 

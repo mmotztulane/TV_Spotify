@@ -22,5 +22,14 @@ class Movie < ActiveRecord::Base
   def get_name
       self.movie
   end
+  
+  def get_photo
+      name = self.movie + ".jpg"
+      if File.file?("#{Rails.root}/app/assets/images/#{name}")
+          return name
+      else
+          return "noimage.png"
+      end
+  end
  
 end
