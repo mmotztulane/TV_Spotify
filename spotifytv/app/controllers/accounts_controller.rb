@@ -15,7 +15,16 @@ class AccountsController < ApplicationController
     
     def edit
     end
-    
+        
+  def search
+    if params[:search].blank?
+      redirect_to :back and return
+    else
+        @parameter = params[:search].downcase
+        @matchMovie = Movie.all.where("lower(movie) LIKE ?", "%#{@parameter}%")
+        @matchAccount = Account.all.where("lower(name) LIKE ?", "%#{@parameter}%")
+    end
+  end
     def create
         @account = Account.new(account_params)
 

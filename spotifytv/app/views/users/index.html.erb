@@ -1,6 +1,5 @@
 <p id="notice"><%= notice %></p>
 <% name = current_login.present? ? current_login.email : 'none' %>
-<h1>Opinions on <%= Movie.where(id: params[:title])[0].movie %></h1>
 
 
 <div class="header"></div>

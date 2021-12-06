@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users
   root :to => redirect('/movies')
   get "settings", to: "settings#index"
+  get 'search', to: "accounts#search"    
   resources :accounts
   resources :movies
   get "login", to: "sessions#new"
