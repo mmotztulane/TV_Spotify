@@ -16,6 +16,7 @@
   <table class="table table-dark table-hover">
       <thead>
         <tr>
+          <th>Profile Pic</th>
           <th>Email</th>
           <th>Reaction</th>
           <th>Comment</th>
@@ -27,6 +28,16 @@
         <% @users.each do |user| %>
           <% if user.movie_id.to_s == params[:title] %>
               <tr>
+                <% if user.get_avatar != "No Picture" %>
+                    <% if user.get_avatar.attached? %>
+                        <td><%= image_tag user.get_avatar, alt: user.get_name, class:'d-block', size: '50x50' %></td>
+                    <% else %>
+                        <td><%= image_tag "defaultprofile.png", alt: user.get_name, class:'d-block', size: '50x50' %></td>
+                    <% end %>
+                  <% else %>
+                      <td><%= image_tag "defaultprofile.png", alt: user.get_name, class:'d-block', size: '50x50' %></td>
+                 <% end %>
+                
                 <td><%= user.get_name %></td>
                 <td><%= user.reaction %></td>
                 <td><%= user.comment %></td>

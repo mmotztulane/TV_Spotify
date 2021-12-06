@@ -2,10 +2,14 @@
 <h1>Account</h1>
 
 <div class="container">  
-
-
+    
+<% if current_login.avatar.attached? %>
+               <%= image_tag current_login.avatar, alt: current_login.email, class:'d-block mx-auto', size: '250x250' %>
+        <% else %>
+              <%= image_tag 'defaultprofile.png', alt: 'No image attributed with user' , class:'d-block mx-auto', size: '250x250' %>
+<% end %>
+    
     <div class="header">
-        <%= image_tag 'defaultprofile.png', alt: current_login.email , class: 'd-block mx-auto' %>
         <h2><%= current_login.email %></h2>
         <div><%= link_to "Edit Profile", edit_login_registration_path%></div>
     </div>
