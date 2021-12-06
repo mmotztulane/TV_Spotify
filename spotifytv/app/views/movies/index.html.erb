@@ -12,6 +12,7 @@
   <table class="table table-dark table-hover">
   <thead>
     <tr>
+      <th>Poster</th>
       <th><%= link_to "Movie", :sort => "movie"%> </th>
       <th><%= link_to "Likes", :sort => "likes"%> </th>
       <th><%= link_to "Dislikes", :sort => "dislikes"%> </th>
@@ -26,6 +27,15 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
+        <% if movie.image.attached? %>
+            <td>
+               <%= image_tag (url_for(movie.image)), size: '100x100', alt: movie.movie %>
+            </td>
+        <% else %>
+          <td>
+              <%= image_tag 'noimage.png', alt: 'No image attributed with movie' , class: 'd-block', size: '100x100' %>
+          </td>
+        <% end %>
         <td><%= link_to movie.movie, users_path(title: movie.id), :id => movie.id %></td>
         <td><%= movie.like_count %></td>
         <td><%= movie.dislike_count %></td>
