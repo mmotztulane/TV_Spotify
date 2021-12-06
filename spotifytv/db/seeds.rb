@@ -9,7 +9,7 @@
     more_users = [
   {:username => 'Max25', :reaction => 'Like',
     :comment => 'Entertaining throughout!'},
-    #1
+    #1 testing heroku
   {:username => 'SanjoBanjo', :reaction => 'Like',
     :comment => 'Very Funny'},
     #2
