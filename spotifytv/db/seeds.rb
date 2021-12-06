@@ -9,7 +9,7 @@
     more_users = [
   {:username => 'Max25', :reaction => 'Like',
     :comment => 'Entertaining throughout!'},
-    #1 testing heroku
+    #1 test
   {:username => 'SanjoBanjo', :reaction => 'Like',
     :comment => 'Very Funny'},
     #2
@@ -193,7 +193,7 @@ more_movies = [
 
 more_movies.each do |movie|
   moovie = Movie.create!(movie)
-  moovie.image.attach(io: File.open(Rails.root.join('app/assets/images/' + moovie.get_name + '.jpg')), filename: moovie.get_name + '.jpg')
+  #moovie.image.attach(io: File.open(Rails.root.join('app/assets/images/' + moovie.get_name + '.jpg')), filename: moovie.get_name + '.jpg')
 end
 
 <<-DOC
