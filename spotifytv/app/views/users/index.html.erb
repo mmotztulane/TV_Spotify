@@ -1,11 +1,16 @@
 <p id="notice"><%= notice %></p>
+<% current_movie = Movie.where(id: params[:title])[0] %>
 <% name = current_login.present? ? current_login.email : 'none' %>
-<h1>Opinions on <%= Movie.where(id: params[:title])[0].movie %></h1>
+<h1>Opinions on <%= current_movie.movie %></h1>
 
 
 <div class="header"></div>
+<% if current_movie.image.attached? %>
+               <%= image_tag (url_for(current_movie.image)), alt: current_movie.movie, class:'d-block mx-auto', size: '250x250' %>
+        <% else %>
+              <%= image_tag 'noimage.png', alt: 'No image attributed with movie' , class:'d-block mx-auto', size: '250x250' %>
+<% end %>
 
-<%= image_tag 'noimage.png', alt: 'Shrek' , class: 'd-block mx-auto' %>
 
 <div class="table-responsive">        
   <table class="table table-dark table-hover">
