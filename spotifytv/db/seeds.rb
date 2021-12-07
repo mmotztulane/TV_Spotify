@@ -9,7 +9,7 @@
     more_users = [
   {:username => 'Max25', :reaction => 'Like',
     :comment => 'Entertaining throughout!'},
-    #1
+    #1 test
   {:username => 'SanjoBanjo', :reaction => 'Like',
     :comment => 'Very Funny'},
     #2
@@ -104,7 +104,7 @@ more_movies = [
   {:movie => 'Happy Feet', :likes => "1", :dislikes => "500", :comments => "100", :genre => "Animated", :age_rating => "G", 
     :release_date => '2006-11-17'},
     #10
-    {:movie => 'Armagedon', :likes => "5", :dislikes => "3", :comments => "16", :genre => "Thriller, Drama", :age_rating => "R", 
+    {:movie => 'Armageddon', :likes => "5", :dislikes => "3", :comments => "16", :genre => "Thriller, Drama", :age_rating => "R", 
     :release_date => '1998-06-30'},
     #11
   {:movie => 'Bolt', :likes => "0", :dislikes => "96", :comments => "0", :genre => "Animated", :age_rating => "G", 
@@ -122,10 +122,10 @@ more_movies = [
   {:movie => 'Madagascar', :likes => "1", :dislikes => "1", :comments => "10", :genre => "Animated", :age_rating => "PG", 
     :release_date => '2005-05-27'},
    #16
-  {:movie => 'Madagascar: Escape 2 Africa', :likes => "5", :dislikes => "3", :comments => "16", :genre => "Animated", :age_rating => "PG", 
+  {:movie => 'Madagascar Escape 2 Africa', :likes => "5", :dislikes => "3", :comments => "16", :genre => "Animated", :age_rating => "PG", 
     :release_date => '2008-11-07'},
     #17
-  {:movie => "Madagascar 3: Europes most wanted", :likes => "0", :dislikes => "96", :comments => "0", :genre => "Animated", :age_rating => "PG", 
+  {:movie => "Madagascar 3 Europes most wanted", :likes => "0", :dislikes => "96", :comments => "0", :genre => "Animated", :age_rating => "PG", 
     :release_date => '2012-06-08'},
     #18
   {:movie => 'Shark Tale', :likes => "1", :dislikes => "13", :comments => "1", :genre => "Animated", :age_rating => "PG", 
@@ -192,7 +192,8 @@ more_movies = [
 
 
 more_movies.each do |movie|
-  Movie.create!(movie)
+  moovie = Movie.create!(movie)
+  #moovie.image.attach(io: File.open(Rails.root.join('app/assets/images/' + moovie.get_name + '.jpg')), filename: moovie.get_name + '.jpg')
 end
 
 <<-DOC

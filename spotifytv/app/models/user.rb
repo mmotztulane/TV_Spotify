@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
     return Login.id_to_name self[:login_id]
   end
   
+  def get_avatar
+    return Login.id_to_avatar self[:login_id]
+  end
+  
 end

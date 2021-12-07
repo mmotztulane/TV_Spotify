@@ -1,9 +1,16 @@
 class AccountsController < ApplicationController
     before_action :set_account, only: %i[ show edit update destroy ]
+    #before_action :authenticate_user!
 
-    def index
-        @account = Account.all
+   def index
+        if !login_signed_in?
+            redirect_to new_login_session_path, :notice => 'You need to login first.'
+        else
+        # Render the view
+        @accounts = Account.all
         @users = User.all
+        end
+ 
     end
     
     def show

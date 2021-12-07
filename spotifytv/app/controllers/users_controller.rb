@@ -21,11 +21,21 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user = User.new
+    if !login_signed_in?
+        redirect_to new_login_session_path, :notice => 'You need to login first.'
+    else
+        # Render the view
+        @user = User.new
+    end
   end
 
   # GET /users/1/edit
   def edit
+      if current_login != @user.login
+        redirect_to @user, notice: "You cannot change another user's opinion."
+      else
+        # Render the view
+      end
   end
 
   # POST /users or /users.json
