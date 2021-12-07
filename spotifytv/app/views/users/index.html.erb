@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 <% current_movie = Movie.where(id: params[:title])[0] %>
 <% name = current_login.present? ? current_login.email : 'none' %>
+
 <h1>Opinions on <%= current_movie.movie %></h1>
+
 
 
 <div class="header"></div>

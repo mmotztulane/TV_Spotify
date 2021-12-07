@@ -2,7 +2,15 @@ class SessionsController < ApplicationController
 
   def new
   end
-
+ def index
+      @user = User.order(params[:sort]) 
+  end
+    
+  # GET /movies/1 or /movies/1.json
+  def show
+       @user = user.find(params[:id])
+  end
+   
   def create
     user = Account.find_by(name: params[:session][:name].downcase)
     if user && (params[:session][:password]== user.password)

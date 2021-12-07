@@ -10,6 +10,39 @@
   <%= @account.password %>
 </p>
 
+</table>
+  <h3>All your posts:</h3>
+  <table class="table table-dark table-hover">
+  <thead>
+        <tr>
+          <th>Movie</th>
+          <th>Email</th>
+          <th>Reaction</th>
+          <th>Comment</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+  <tbody>
+        <% @users.each do |user| %>
+             <% if user.get_name == @account.name %>
+              <tr>
+                <td><%= Movie.where(id: user.movie_id)[0].movie  %></td>
+                <td><%= user.get_name %></td>
+                <td><%= user.reaction %></td>
+                <td><%= user.comment %></td>
+                <!--
+                <td><%= link_to '', user, class: "fas fa-eye" %></td>
+                <td><%= link_to '', edit_user_path(user), class: "fas fa-edit" %> </td>
+                <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
+                   -->
+              <% end %>
+               
+          </tr>
+        <% end %>
+      </tbody>
+</table>
+
 <div class="col-xs-12" style="height:30px;"></div>
 <%= link_to 'Edit', edit_account_path(@account),class: "btn btn-secondary btn-sm" %> |
 <%= link_to 'Back', accounts_path, class: "btn btn-secondary btn-sm" %>

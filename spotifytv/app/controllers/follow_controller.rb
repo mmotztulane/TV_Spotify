@@ -1,15 +1,15 @@
-class MoviesController < ApplicationController
+class FollowController < ApplicationController
+    class MoviesController < ApplicationController
   before_action :set_movie, only: %i[ show edit update destroy ]
-
-  # GET /movies or /movies.json
   def index
-      @movies = Movie.order(params[:sort])
+      @follow = Follow.order(params[:sort])
       
   end
+def search
     
-  # GET /movies/1 or /movies/1.json
+  end
   def show
-       @movies = Movie.find(params[:id])
+       @follow = Follow.find(params[:id])
   end
 
   # GET /movies/new
@@ -68,12 +68,9 @@ class MoviesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def movie_params
-      params.require(:movie).permit(:movie, :likes, :dislikes, :comments, :genre, :age_rating, :release_date, :image)
+      params.require(:movie).permit(:movie, :likes, :dislikes, :comments, :genre, :age_rating, :release_date)
     end
-    
-    
-    def attach_image
-        @movie.image.attach(params[:image])
-    end
+
+end
 
 end

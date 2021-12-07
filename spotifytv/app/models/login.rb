@@ -6,12 +6,13 @@ class Login < ApplicationRecord
     
     has_many :logins
     has_many :movies, :through => :logins
+
     has_one_attached :avatar
     
     def avatar_thumbnail
         avatar
     end
-    
+
     
     def self.id_to_name id
         login = Login.where(id: id)
