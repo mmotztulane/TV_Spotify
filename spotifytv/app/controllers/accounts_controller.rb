@@ -2,7 +2,7 @@ class AccountsController < ApplicationController
     before_action :set_account, only: %i[ show edit update destroy ]
 
     def index
-        @accounts = Account.all
+        @account = Account.all
         @users = User.all
     end
     
@@ -22,7 +22,7 @@ class AccountsController < ApplicationController
     else
         @parameter = params[:search].downcase
         @matchMovie = Movie.all.where("lower(movie) LIKE ?", "%#{@parameter}%")
-        @matchAccount = Account.all.where("lower(name) LIKE ?", "%#{@parameter}%")
+        @matchLogin = Login.all.where("lower(email) LIKE ?", "%#{@parameter}%")
     end
   end
     def create
@@ -58,7 +58,22 @@ class AccountsController < ApplicationController
           format.json { head :no_content }
         end
   end
-    
+  def user_followers
+      @account = Account.where(id: params[:id]).first
+      @followers = @account.get_followers
+    end
+
+def user_following
+  @account = Account.where(id: params[:id]).first
+  @following = @account.get_following
+end
+def get_followers
+  Follower.where(follower_id: self.id)
+end
+
+def get_following
+  Follower.where(user_id: self.id)
+end
     private
     # Use callbacks to share common setup or constraints between actions.
     def set_account

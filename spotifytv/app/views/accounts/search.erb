@@ -4,7 +4,7 @@
 <table class="table">
   <thead class="table-secondary">
     <tr>
-      <th><%= link_to "Movie", :sort => "movie"%> </th>
+      <th>Movie </th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,21 +18,4 @@
   </tbody>
 </table>
 
-<h3>Search Results of Accounts:</h3>
-<table class="table">
-  <thead class="table-secondary">
-    <tr>
-      <th>Username </th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-     <% @matchAccount.each do |account| %>
-      <tr>
-        <td><%= link_to account.name,_path(title: movie.id), :id => movie.id %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-</div>

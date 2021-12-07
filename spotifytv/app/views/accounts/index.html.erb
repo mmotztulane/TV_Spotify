@@ -11,8 +11,10 @@
     </div>
  
     <div>Email: <span class="info"><%= current_login.email %></span></div>
-    <div>Followers: <span class="info">0</span></div>
-    <div>Following: <span class="info">0</span></div>
+    <div>Followers: <span class="info">0
+    </span></div>
+    <div>Following: <span class="info">0
+    </span></div>
     <br/>
     <hr>
          <%= form_tag(search_path, :method => "get") do %>
@@ -26,6 +28,8 @@
     
     
     <hr>
+ 
+</div>
   <h3>All your posts:</h3>
   <table class="table table-dark table-hover">
   <thead>
