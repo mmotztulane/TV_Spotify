@@ -10,8 +10,6 @@ class SessionsController < ApplicationController
   def show
        @user = user.find(params[:id])
   end
-
-    
    
   def create
     user = Account.find_by(name: params[:session][:name].downcase)
