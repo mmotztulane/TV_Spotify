@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-#ActiveRecord::Schema.define(version: 2021_12_06_040006) do
-ActiveRecord::Schema.define(version: 2021_12_05_204100) do
-
+ActiveRecord::Schema.define(version: 2021_12_06_040006) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "name"
@@ -20,13 +18,6 @@ ActiveRecord::Schema.define(version: 2021_12_05_204100) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
-
-
-  #create_table "follows", force: :cascade do |t|
-    #t.integer "follower_id"
-    #t.integer "followed_user_id"
-   #t.datetime "created_at", precision: 6, null: false
-   #t.datetime "updated_at", precision: 6, null: false
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -47,6 +38,13 @@ ActiveRecord::Schema.define(version: 2021_12_05_204100) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "follows", force: :cascade do |t|
+    t.integer "follower_id"
+    t.integer "followed_user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "logins", force: :cascade do |t|
