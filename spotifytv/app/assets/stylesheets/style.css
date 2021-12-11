@@ -18,5 +18,20 @@
 /* Used for links in the movies tab */
 a {color: #32CD32;}
 a:hover { /* Background color in nav */
+  font-weight: bold;
   color: #348535;
+  
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+   background-color: green;
+}
+
+.btn-success{
+    background-color:#348535;
+}
+.tableHeader{
+    color:#32CD32;
+}
+#navColor{
+    color:black;
 }

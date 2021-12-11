@@ -9,7 +9,7 @@
         <div class="input-group my-2 my-lg-0">
             <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control my-lg-0"%>
             <div class="input-group-btn-outline-success my-2 my-sm-0">
-                <%= button_tag "Search", :class => 'btn btn-outline-success', :name => nil%>
+                <%= button_tag "Search", :class => 'btn btn-success', :name => nil%>
             </div>
         </div>
         <% end %>
@@ -18,15 +18,15 @@
   <table class="table table-dark table-hover">
   <thead>
     <tr>
-      <th>Poster</th>
-      <th><%= link_to "Movie", :sort => "movie"%> </th>
-      <th><%= link_to "Likes", :sort => "likes"%> </th>
-      <th><%= link_to "Dislikes", :sort => "dislikes"%> </th>
-      <th><%= link_to "Comments", :sort => "comments"%> </th>
-      <th><%= link_to "Genre", :sort => "genre"%> </th>
-      <th><%= link_to "Age Rating", :sort => "age_rating"%> </th>
-      <th><%= link_to "Release Date", :sort => "release_date"%> </th>
-      <th colspan="3"></th>
+      <th class="tableHeader">Poster</th>
+      <th class="tableHeader"><%= link_to "Movie", :sort => "movie"%> </th>
+      <th class="tableHeader"><%= link_to "Likes", :sort => "likes"%> </th>
+      <th class="tableHeader"><%= link_to "Dislikes", :sort => "dislikes"%> </th>
+      <th class="tableHeader"><%= link_to "Comments", :sort => "comments"%> </th>
+      <th class="tableHeader"><%= link_to "Genre", :sort => "genre"%> </th>
+      <th class="tableHeader"><%= link_to "Age Rating", :sort => "age_rating"%> </th>
+      <th class="tableHeader"><%= link_to "Release Date", :sort => "release_date"%> </th>
+      <th class="tableHeader" colspan="3"></th>
     </tr>
   </thead>
 
