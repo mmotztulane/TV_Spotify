@@ -238,6 +238,8 @@ more_accounts = [
     {:name => 'MitochondriaLover', :password => 'Bill!Nye!Science!'},
     
     {:name => 'PoppyHoppy', :password => 'PopcornismyJam212'}
+    
+    {:name => 'yuxuan', :password => '1qaz2wsx'}
  
 ]
 

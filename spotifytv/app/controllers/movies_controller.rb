@@ -3,7 +3,7 @@ class MoviesController < ApplicationController
 
   # GET /movies or /movies.json
   def index
-      @movies = Movie.order(params[:sort])
+      @movies = Movie.order(params[:sort]).page(params[:page])
       
   end
     

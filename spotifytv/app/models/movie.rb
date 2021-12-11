@@ -7,6 +7,8 @@ class Movie < ActiveRecord::Base
   has_many :users, dependent: :delete_all
   has_one_attached :image
     
+  paginates_per 6
+    
   def comment_count
      return self.users.where.not(:comment => "No Comment").count
   end

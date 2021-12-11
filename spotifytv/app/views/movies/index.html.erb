@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Movies</h1>
-
 <h2>Click on a movie title's hyperlink to go to its page!</h2>
+
 <br/>
 <div class="header"></div>
    <%= form_tag(search_path, :method => "get") do %>
@@ -57,6 +57,6 @@
   </tbody>
 </table>
 </div>
-
+<%= paginate @movies %>
 <br>
 <a href="movies/new" class="btn btn-success">Add Movie</a>
