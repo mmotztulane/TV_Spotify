@@ -34,4 +34,8 @@ a:hover { /* Background color in nav */
 }
 #navColor{
     color:black;
+    font-size: 110%;
+}
+#navName{
+    font-size:125%;
 }
