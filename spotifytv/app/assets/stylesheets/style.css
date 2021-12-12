@@ -18,7 +18,7 @@
 /* Used for links in the movies tab */
 a {color: #32CD32;}
 a:hover { /* Background color in nav */
-  font-weight: bold;
+  font-style: italic;
   color: #348535;
   
 }
@@ -38,4 +38,10 @@ a:hover { /* Background color in nav */
 }
 #navName{
     font-size:125%;
+}
+#navColor:hover, #navName:hover{
+    font-weight:bold;
+}
+.tableHeader:hover{
+    font-size: 105%;
 }
