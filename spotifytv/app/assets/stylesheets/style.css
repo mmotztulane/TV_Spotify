@@ -1,5 +1,6 @@
     body {
   background-color: rgb(35,35,35);
+        font-family: "American Typewriter", Times, serif;
     }
     .info {
         color:#32CD32;
@@ -18,7 +19,6 @@
 /* Used for links in the movies tab */
 a {color: #32CD32;}
 a:hover { /* Background color in nav */
-  font-style: italic;
   color: #348535;
   
 }
@@ -42,6 +42,6 @@ a:hover { /* Background color in nav */
 #navColor:hover, #navName:hover{
     font-weight:bold;
 }
-.tableHeader:hover{
+.tableHeader{
     font-size: 105%;
 }
