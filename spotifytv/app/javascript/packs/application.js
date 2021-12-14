@@ -7,7 +7,6 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require('image-enlarge')
 
 document.on('turbolinks:load', alert("Website has sucessfully loaded!"));
 

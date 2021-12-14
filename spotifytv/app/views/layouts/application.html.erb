@@ -40,7 +40,7 @@
                 <a class="nav-link" href="/accounts" id="navColor">Account</a>
             </li>
             <li class="nav-item" >
-                   <a class="nav-link" onclick="logout()" id="navColor">Logout</a>
+                   <%= link_to 'Log out', destroy_login_session_path, method: :delete, class: 'nav-link', data: {confirm: "Are you sure you want to log out?"}, id:'navColor'%>
             </li>
              
             
