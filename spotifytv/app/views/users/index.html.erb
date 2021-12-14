@@ -17,37 +17,37 @@
 
 <div class="table-responsive">        
   <table class="table table-dark table-hover">
-      <thead>
+      <thead role = "tableHeading">
         <tr>
-          <th>Profile Pic</th>
-          <th>Email</th>
-          <th>Reaction</th>
-          <th>Comment</th>
+          <th role = "tableHead">Profile Pic</th>
+          <th role = "tableHead">Email</th>
+          <th role = "tableHead">Reaction</th>
+          <th role = "tableHead">Comment</th>
           <th colspan="3"></th>
         </tr>
       </thead>
 
-      <tbody>
+      <tbody role = "tableBody">
         <% @users.each do |user| %>
           <% if user.movie_id.to_s == params[:title] %>
               <tr>
                 <% if user.get_avatar != "No Picture" %>
                     <% if user.get_avatar.attached? %>
-                        <td><%= image_tag user.get_avatar, alt: user.get_name, class:'d-block', size: '50x50' %></td>
+                        <td role = "tableCell"><%= image_tag user.get_avatar, alt: user.get_name, class:'d-block', size: '50x50' %></td>
                     <% else %>
-                        <td><%= image_tag "defaultprofile.png", alt: user.get_name, class:'d-block', size: '50x50' %></td>
+                        <td role = "tableCell"><%= image_tag "defaultprofile.png", alt: user.get_name, class:'d-block', size: '50x50' %></td>
                     <% end %>
                   <% else %>
-                      <td><%= image_tag "defaultprofile.png", alt: user.get_name, class:'d-block', size: '50x50' %></td>
+                      <td role = "tableCell"><%= image_tag "defaultprofile.png", alt: user.get_name, class:'d-block', size: '50x50' %></td>
                  <% end %>
                 
-                <td><%= user.get_name %></td>
-                <td><%= user.reaction %></td>
-                <td><%= user.comment %></td>
-                <td><%= link_to '', user, class: "fas fa-eye" %></td>
+                <td role = "tableCell"><%= user.get_name %></td>
+                <td role = "tableCell"><%= user.reaction %></td>
+                <td role = "tableCell"><%= user.comment %></td>
+                <td role = "button"><%= link_to '', user, class: "fas fa-eye" %></td>
                 <% if user.get_name == name %>
-                    <td><%= link_to '', edit_user_path(user), class: "fas fa-edit" %> </td>
-                    <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
+                    <td role = "button"><%= link_to '', edit_user_path(user), class: "fas fa-edit" %> </td>
+                    <td role = "button"><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
                 <% end %>
                <% end %>
           </tr>
@@ -59,7 +59,7 @@
 <br>
 
 <% if login_signed_in? %>
-        <a href="users/new" class="btn btn-primary">New Opinion</a>
+        <a href="users/new" class="btn btn-primary" role = "button">New Opinion</a>
 <% end %>
 
 <!-- <%= link_to 'New User', new_user_path %> -->

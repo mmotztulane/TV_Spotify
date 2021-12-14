@@ -9,7 +9,7 @@
               <%= image_tag 'defaultprofile.png', alt: 'No image attributed with user' , class:'d-block mx-auto', size: '250x250' %>
 <% end %>
     
-    <div class="header">
+    <div class="header" >
         <h2><%= current_login.email %></h2>
         <div><%= link_to "Edit Profile", edit_login_registration_path%></div>
 
@@ -27,29 +27,24 @@
 </div>
   <h3>All your posts:</h3>
   <table class="table table-dark table-hover">
-  <thead>
+  <thead role = "tableHeading">
         <tr>
-          <th class="tableHeader">Movie</th>
-          <th class="tableHeader">Email</th>
-          <th class="tableHeader">Reaction</th>
-          <th class="tableHeader">Comment</th>
+          <th class="tableHeader" role = "tableHead">Movie</th>
+          <th class="tableHeader" role = "tableHead">Email</th>
+          <th class="tableHeader" role = "tableHead">Reaction</th>
+          <th class="tableHeader" role = "tableHead">Comment</th>
           <th  class="tableHeader" colspan="3"></th>
         </tr>
       </thead>
 
-  <tbody>
+  <tbody role = "tableBody">
         <% @users.each do |user| %>
              <% if user.get_name == current_login.email %>
               <tr>
-                <td><%= Movie.where(id: user.movie_id)[0].movie  %></td>
-                <td><%= user.get_name %></td>
-                <td><%= user.reaction %></td>
-                <td><%= user.comment %></td>
-                <!--
-                <td><%= link_to '', user, class: "fas fa-eye" %></td>
-                <td><%= link_to '', edit_user_path(user), class: "fas fa-edit" %> </td>
-                <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?'}, class: "far fa-trash-alt" %></td>
-                   -->
+                <td role = "tableCell"><%= Movie.where(id: user.movie_id)[0].movie  %></td>
+                <td role = "tableCell"><%= user.get_name %></td>
+                <td role = "tableCell"><%= user.reaction %></td>
+                <td role = "tableCell"><%= user.comment %></td>
               <% end %>
                
           </tr>
