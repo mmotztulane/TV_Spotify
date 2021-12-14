@@ -24,9 +24,10 @@
   <div class="form-group">
     <label for="comment?">Comment:</label>
     <ul>
+       <li>Leave Blank for No Comment.</li>
        <li>Only allows letters, numbers, commas, spaces, and end of sentence punctuation.</li>
     </ul>
-    <%= form.text_field :comment, class: "form-control", placeholder: "optional", :value => "No Comment" %>
+    <%= form.text_field :comment, class: "form-control", placeholder: "optional" %>
   </div>
 
   <div class="field form-group">

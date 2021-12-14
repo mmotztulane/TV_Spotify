@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
     create_table 'users' do |t|
       t.string 'username', :null => false, :default => 'AccountDeleted'
       t.string 'reaction'
-      t.text 'comment', :null => false, :default => 'No Comment'
+      t.text 'comment'
       t.timestamps
     end
   end

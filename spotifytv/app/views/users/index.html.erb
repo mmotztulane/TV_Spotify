@@ -43,7 +43,7 @@
                 
                 <td role = "tableCell"><%= user.get_name %></td>
                 <td role = "tableCell"><%= user.reaction %></td>
-                <td role = "tableCell"><%= user.comment %></td>
+                <td role = "tableCell"><%= user.no_comment %></td>
                 <td role = "button"><%= link_to '', user, class: "fas fa-eye" %></td>
                 <% if user.get_name == name %>
                     <td role = "button"><%= link_to '', edit_user_path(user), class: "fas fa-edit" %> </td>

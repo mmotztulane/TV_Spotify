@@ -10,7 +10,7 @@ class Movie < ActiveRecord::Base
   paginates_per 6
     
   def comment_count
-     return self.users.where.not(:comment => "No Comment").count
+     return self.users.where.not(:comment => "").count
   end
   
   def like_count
@@ -33,5 +33,7 @@ class Movie < ActiveRecord::Base
           return "noimage.png"
       end
   end
+    
+ 
  
 end

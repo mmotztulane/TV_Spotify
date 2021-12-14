@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_040006) do
   create_table "users", force: :cascade do |t|
     t.string "username", default: "AccountDeleted", null: false
     t.string "reaction"
-    t.text "comment", default: "No Comment", null: false
+    t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "login_id"

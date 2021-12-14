@@ -19,13 +19,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
- 
-     <script>
-         function logout() {
-            confirm("Are you sure you want to signout?");
-           
-         }
-      </script>
+
   </head>
 
   <body>
@@ -45,8 +39,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="/accounts" id="navColor">Account</a>
             </li>
-            <li class="nav-item" onclick="logout()">
-                <%= link_to 'Log out', destroy_login_session_path, method: :delete, class: 'nav-link', id:'navColor'%>
+            <li class="nav-item" >
+                   <a class="nav-link" onclick="logout()" id="navColor">Logout</a>
             </li>
              
             
