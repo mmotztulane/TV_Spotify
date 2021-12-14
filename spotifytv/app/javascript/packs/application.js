@@ -7,21 +7,11 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require('image-enlarge')
 
 document.on('turbolinks:load', alert("Website has sucessfully loaded!"));
 
 
-function bigImg(x) {
-  alert("Shrek!")
-  //x.style.transform = "64px";
-  //x.style.width = "64px";
-}
-
-function normalImg(x) {
-  alert("Shrek!")
-  //x.style.height = "32px";
-  //x.style.width = "32px";
-}
 // = require bootstrap-datepicker
 
 

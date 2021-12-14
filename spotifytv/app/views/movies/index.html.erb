@@ -5,17 +5,7 @@
 <br/>
 <div class="header">
     <head>
-        <script>
-function bigImg(x) {
-  x.style.height = "300px";
-  x.style.width = "300px";
-}
-
-function normalImg(x) {
-  x.style.height = "80px";
-  x.style.width = "100px";
-}
-            </script>
+        <%= javascript_pack_tag 'image-enlarge' %>
     </head>
 </div>
    <%= form_tag(search_path, :method => "get") do %>
