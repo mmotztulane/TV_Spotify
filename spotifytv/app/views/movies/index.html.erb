@@ -3,7 +3,21 @@
 <h1>Movies</h1>
 
 <br/>
-<div class="header"></div>
+<div class="header">
+    <head>
+        <script>
+function bigImg(x) {
+  x.style.height = "300px";
+  x.style.width = "300px";
+}
+
+function normalImg(x) {
+  x.style.height = "80px";
+  x.style.width = "100px";
+}
+            </script>
+    </head>
+</div>
    <%= form_tag(search_path, :method => "get") do %>
         <div class="input-group my-2 my-lg-0">
             <%= search_field_tag :search, params[:search], placeholder: "Search for movies", class: "form-control my-lg-0"%>
@@ -33,12 +47,12 @@
     <% @movies.each do |movie| %>
       <tr>
         <% if movie.image.attached? %>
-            <td id = "image" onmouseover="imageEnlarge(this)" onmouseout="imageReset(this)">
-               <%= image_tag (url_for(movie.image)), size: '100x100', alt: movie.movie, onmouseover: "imageEnlarge(this)", onmouseout: "imageReset(this)" %>
+            <td id = "image">
+               <%= image_tag (url_for(movie.image)), size: '100x100', alt: movie.movie, onmouseover: 'bigImg(this)', onmouseout:'normalImg(this)' %>
             </td>
         <% else %>
-          <td id = "image" onmouseover="imageEnlarge(this)" onmouseout="imageReset(this)">
-              <%= image_tag movie.get_photo, alt: movie.movie , class: 'd-block', size: '100x100', onmouseover: "imageEnlarge(this)", onmouseout: "imageReset(this)"%>
+          <td id = "image">
+              <%= image_tag movie.get_photo, alt: movie.movie , class: 'd-block', size: '100x100', onmouseover: 'bigImg(this)', onmouseout: 'normalImg(this)'%>
           </td>
         <% end %>
         <td><%= link_to movie.movie, users_path(title: movie.id), :id => movie.id %></td>
@@ -60,20 +74,5 @@
 <br>
 <a href="movies/new" class="btn btn-success">Add Movie</a>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
 
-function imageEnlarge(x) {
- x.style.width = "1000px"
- x.style.height = "1000px"
- }
-
-function imageReset(x)   { 
- x.style.width = "1000px"
- x.style.height = "1000px"
-}
-
-});
-    
-</script>
 
