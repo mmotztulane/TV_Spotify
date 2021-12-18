@@ -5,8 +5,19 @@
 <br/>
 <div class="header">
     <head>
-        <%= javascript_pack_tag 'image-enlarge' %>
-    </head>
+    <%= javascript_pack_tag 'image-enlarge' %>
+    <script>
+        var status="<%= notice %>";
+        if(status == 'Signed out successfully.'){
+            alert("You are signed out");
+        }
+        if(status == 'Signed in successfully.'){
+            alert("Welcome to FlickShare \r\n"
+                  +"Let us know what you think of your favorite movies!");
+        }
+    </script>
+ </head>
+    
 </div>
    <%= form_tag(search_path, :method => "get") do %>
         <div class="input-group my-2 my-lg-0">
