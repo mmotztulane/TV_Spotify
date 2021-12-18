@@ -18,8 +18,9 @@ class User < ActiveRecord::Base
    def no_comment
       if self.comment.blank?
           return "No Comment"
-      self.comment
-      end
+      else 
+          return self.comment
+     end
    end
   
 end
